@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Yujie Yang | Portfolio</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Header -->
+  <header>
+    <h1>Yujie Yang (UJ)</h1>
+    <p>They/them</p>
+    <h2>Hi, I am UJ, an Illustrator, Graphic designer, Animator, Photographer and more.</h2>
+
+    <img 
+      src="images/First_web_page/Myprofileimage.png" 
+      alt="Portrait of Yujie Yang"
+      id="profile-image"
+      width="234" 
+      height="287"
+    >
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <section class="recent-projects">
+  <h2>My Recent Projects</h2>
+
+  <div class="projects-grid">
+    <a href="images/Portfolio/comics/Tsan Di short comics.pdf" class="project-card">
+      <h3>Tsan Di </h3>
+      <p>Independent short comic</p>
+    </a>
+
+    <a href="DFMV.html" class="project-card">
+      <h3>Daddy's Favorite </h3>
+      <p>2D/3D Hybrid Animated Music Video</p>
+    </a>
+
+    <a href="Animation-showreel.html" class="project-card">
+      <h3>Animation Showreel</h3>
+      <p>A collection of my animation work from 2023-2025</p>
+    </a>
+  </div>
+</section>
+
+  <!-- ===== PORTFOLIO ===== -->
+
+    <section class="portfolio-section">
+
+      <h2>Portfolio</h2>
+
+      <div class="portfolio-grid">
+
+        <!-- ILLUSTRATIONS -->
+
+        <div class="portfolio-item">
+
+          <div class="portfolio-wrapper">
+
+            <a href="Portfolio.html" id="illustrations" class="portfolio-card">
+
+              <img src="images/Portfolio/Illustrations/physical-paintings/SC2580294 J21091317370 Large.jpeg" alt="Illustrations">
+
+              <div class="overlay-text">Illustrations</div>
+
+            </a>
+
+            <button onclick="toggleSection('illustrations-content')">Illustrations</button>
+
+            <div id="illustrations-content" class="portfolio-content"></div>
+
+          </div>
+
+        </div>
+        <!-- COMICS -->
+
+        <div class="portfolio-item">
+
+          <div class="portfolio-wrapper">
+
+            <a href="comics.html" id="comics" class="portfolio-card">
+
+              <img src="images/Portfolio/comics/Manga Reinterpretation_ Demon Slayer.JPG" alt="Comics">
+
+              <div class="overlay-text">Comics</div>
+
+            </a>
+
+            <button onclick="toggleSection('comics-content')">Comics</button>
+
+            <div id="comics-content" class="portfolio-content">
+
+              <!-- expandable content here -->
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Animation -->
+
+        <div class="portfolio-item">
+
+          <div class="portfolio-wrapper">
+
+            <a href="videos.html" id="videos" class="portfolio-card">
+
+              <img src="images/Portfolio/videos/video-cover Large.jpeg" alt="Videos">
+
+              <div class="overlay-text">Videos</div>
+
+            </a>
+
+            <button onclick="toggleSection('videos-content')">Animation</button>
+
+            <div id="videos-content" class="portfolio-content"></div>
+
+          </div>
+
+        </div>
+
+        <!-- COMMISSIONS -->
+
+        <div class="portfolio-item">
+
+          <div class="portfolio-wrapper">
+
+            <a href="commissions.html" id="commissions" class="portfolio-card">
+
+              <img src="images/Portfolio/past-commisions/Untitled_Artwork 2 copy.jpg" alt="Commissions">
+
+              <div class="overlay-text">Past Commissions</div>
+
+            </a>
+
+            <button onclick="toggleSection('commissions-content')">Past Commissions</button>
+
+            <div id="commissions-content" class="portfolio-content"></div>
+
+          </div>
+
+        </div>
+
+        <!-- CHARACTER DESIGN -->
+
+        <div class="portfolio-item">
+
+          <div class="portfolio-wrapper">
+
+            <a href="character.html" id="character" class="portfolio-card">
+
+              <img src="images/Portfolio/charcater-design/Character_Design_Angelo.jpg" alt="Character Design">
+
+              <div class="overlay-text">Character Design</div>
+
+            </a>
+
+            <button onclick="toggleSection('character-content')">Character Design</button>
+
+            <div id="character-content" class="portfolio-content"></div>
+
+          </div>
+
+        </div>
+
+        <!-- 6. PHOTOGRAPHY -->
+
+        <div class="portfolio-item">
+
+          <div class="portfolio-wrapper">
+
+            <a href="photography.html" id="photography" class="portfolio-card">
+
+              <img src="images/Portfolio/photography/Tentacles_1.jpg" alt="Photography">
+
+              <div class="overlay-text">Photography</div>
+
+            </a>
+
+            <button onclick="toggleSection('photography-content')">Photography</button>
+
+            <div id="photography-content" class="portfolio-content"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>Connect with me:</p>
+
+      <div class="social-links">
+
+        <a href="https://www.linkedin.com/in/yujie-yang-64a9a4349/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+          <span>Yujie Yang</span>
+        </a>
+
+        <a href="https://www.instagram.com/ujay_ujay_/?hl=en" target="_blank">
+          <i class="fab fa-instagram"></i>
+          <span>@ujay_ujay_</span>
+        </a>
+
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=paokiwi139@gmail.com">
+          <i class="fas fa-envelope"></i>
+          <span>paokiwi139@gmail.com</span>
+        </a>
+
+      </div>
+
+      <p>© 2025 Yujie Yang. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script-darkmode.js"></script>
+
+</body>
+</html>
