@@ -1,0 +1,16 @@
+body {
+    background-color: white;
+    color: black;
+}
+
+a {
+    color: blue;
+}
+/* Dark mode styles */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+a.dark-mode {
+    color: lightblue;
+}
