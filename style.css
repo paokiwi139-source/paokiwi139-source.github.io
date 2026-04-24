@@ -13,7 +13,7 @@ body {
 
 /* Dark Mode */
 .dark-mode {
-  background-image: url("images/Portfolio/Overlay photo.png"); 
+  background-image: url("images/Portfolio/Overlay-photo-Large.jpg"); 
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
 }
