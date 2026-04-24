@@ -1,6 +1,6 @@
 
 body {
-  background-image: url("images/Portfolio/Overlay photo.png");
+  background-image: url("images/Portfolio/Overlay-photo-Large.jpg");
   background-size: cover;
   background-position: center;
   background-color: rgba(255, 255, 255, 0.5);
@@ -143,22 +143,35 @@ button:hover {
 .artwork-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 15px;
   padding: 20px;
 }
 
-.artwork-container img {
-  width: 100%;
-  height: auto; /* Maintains aspect ratio */
-  border-radius: 10px;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.video-container,
-.comic-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+/* TABLET (iPad) */
+@media (max-width: 1024px) {
+  .artwork-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .artwork-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Image styling */
+.artwork-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
 
 .video-container iframe,
@@ -442,5 +455,154 @@ footer {
 @media (max-width: 500px) {
   .reels-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ===== PROFILE WRAPPER ===== */
+.profile-wrapper {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 40px auto;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+/* ===== INNER (FLIP CONTAINER) ===== */
+.profile-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  transform-origin: center center; /* 🔥 FIXES OFF-CENTER FLIP */
+}
+
+/* FLIP TRIGGER */
+.profile-wrapper.active .profile-inner {
+  transform: rotateY(180deg);
+}
+
+/* ===== IMAGES ===== */
+.profile-img {
+  position: absolute;
+  inset: 0; /* 🔥 ensures perfect centering */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  backface-visibility: hidden;
+}
+
+/* BACK SIDE */
+.profile-img.back {
+  transform: rotateY(180deg);
+}
+
+/* ===== SPARKLES ===== */
+.sparkle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 22px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 10; /* 🔥 ensures they are ABOVE image */
+}
+
+/* animation trigger */
+
+.profile-wrapper.active .sparkle {
+
+  animation: sparkle-burst 0.9s ease-out forwards;
+
+}
+
+@keyframes sparkle-burst {
+
+  0% {
+
+    opacity: 0;
+
+    transform: translate(-50%, -50%) scale(0);
+
+  }
+
+  30% {
+
+    opacity: 1;
+
+  }
+
+  100% {
+
+    transform: translate(
+
+      calc(-50% + var(--x)),
+
+      calc(-50% + var(--y))
+
+    ) scale(1.4)rotate(180deg);
+
+    opacity: 0;
+  }
+}
+
+/* ANIMATION */
+@keyframes sparkle-burst {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1.4);
+    opacity: 0;
+  }
+}
+
+.profile-wrapper:hover {
+  filter: drop-shadow(0 0 15px rgba(255,255,255,0.5));
+}
+/* CONTAINER */
+.comics-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 40px 0;
+}
+
+/* EACH COMIC */
+.comic-item {
+  width: 50%;
+}
+
+/* IMAGE */
+.comic-item img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* HOVER */
+.comic-item img:hover {
+  transform: scale(1.02);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .comic-item {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .comic-item {
+    width: 95%;
   }
 }
