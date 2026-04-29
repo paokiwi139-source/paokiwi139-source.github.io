@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,7 +16,6 @@
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
 </head>
 
 <body>
@@ -27,219 +25,181 @@
     <i class="fas fa-moon"></i>
   </button>
 
-  <!-- Header -->
-  <header>
-    <h1>Yujie Yang (UJ)</h1>
-    <p>They/them</p>
-    <h2>Hi, I am UJ, an Illustrator, Graphic designer, Animator, Photographer and more.</h2>
+  <section class="landing-hero">
 
-  <div class="profile-wrapper" id="profile-wrapper">
+  <div class="landing-bg">
+<video autoplay muted loop playsinline>
+  <source src="images/Yujie_Yang_main_Web_page.mp4" type="video/mp4">
+</video>  </div>
 
-  <div class="profile-inner">
-    <!-- FRONT IMAGE -->
-    <img 
-      src="images/First_web_page/Myprofileimage.png" 
-      class="profile-img front"
-      alt="Profile front"
-    >
+  <div class="name-layer english-name">
+  <img src="images/English-name.png" alt="Yujie Yang">
+</div>
 
-    <!-- BACK IMAGE -->
-    <img 
-      src="images/First_web_page/Myprofileimage2.png" 
-      class="profile-img back"
-      alt="Profile back"
-    >
-  <!-- sparkles MUST be here -->
-  <div class="sparkle">✨</div>
-  <div class="sparkle">✨</div>
-  <div class="sparkle">✨</div>
-  <div class="sparkle">✨</div>
-  <div class="sparkle">✨</div>
-  <div class="sparkle">✨</div>
+<div class="name-layer chinese-name">
+  <img src="images/Chinese-name.png" alt="杨雨jie">
+</div>
 
+  <div class="scroll-hint">
+    Scroll down
   </div>
+
+</section>
+
+<main id="main-content">
+  <!-- your existing homepage content starts here -->
+</main>
+
+  <!-- Header / Hero -->
+  <header class="hero">
+
+    <div class="hero-text">
+      <h1>Yujie Yang <span>(UJ)</span></h1>
+
+      <p class="pronouns">They/them</p>
+
+     <h2 className="text-6xl font-bold leading-tight max-w-4xl mb-8">Multidisciplinary visual storytelling through design, motion, and illustration.</h2>
+     <p className="text-lg text-white/70 max-w-3xl leading-8 mb-10">
+
+          Recent Bachelor of Design graduate based in Wellington. I create narrative-driven work across branding, animation, comics, digital illustration, and experimental media.
+
+        </p>
+
+    </div>
+
+    <!-- Profile Flip + Sparkle Animation -->
+    <div class="profile-wrapper" id="profile-wrapper">
+
+      <div class="profile-inner">
+        <img 
+          src="images/First_web_page/Myprofileimage.png" 
+          class="profile-img front"
+          alt="Profile image of Yujie Yang"
+        >
+
+        <img 
+          src="images/First_web_page/Myprofileimage2.png" 
+          class="profile-img back"
+          alt="Alternate profile image of Yujie Yang"
+        >
+      </div>
+
+      <div class="sparkle">✨</div>
+      <div class="sparkle">✨</div>
+      <div class="sparkle">✨</div>
+      <div class="sparkle">✨</div>
+      <div class="sparkle">✨</div>
+      <div class="sparkle">✨</div>
+      <div class="sparkle">✨</div>
+      <div class="sparkle">✨</div>
+
+    </div>
 
   </header>
 
-  <!-- SPARKLES -->
-  <div class="sparkle">✨</div>
-  <div class="sparkle">✨</div>
-  <div class="sparkle">✨</div>
-  <div class="sparkle">✨</div>
-  <div class="sparkle">✨</div>
-  <div class="sparkle">✨</div>
-
-</div>
-
-  <!-- Main Content -->
   <main>
 
+    <!-- Recent Projects -->
     <section class="recent-projects">
-  <h2>My Recent Projects</h2>
-
-  <div class="projects-grid">
-    <a href="images/Portfolio/comics/Tsan Di short comics.pdf" class="project-card">
-      <h3>Tsan Di </h3>
-      <p>Independent short comic</p>
-    </a>
-
-    <a href="DFMV.html" class="project-card">
-      <h3>Daddy's Favorite </h3>
-      <p>2D/3D Hybrid Animated Music Video</p>
-    </a>
-
-    <a href="Animation-showreel.html" class="project-card">
-      <h3>Animation Showreel</h3>
-      <p>A collection of my animation work from 2023-2025</p>
-    </a>
-  </div>
-</section>
-
-  <!-- ===== PORTFOLIO ===== -->
-
-    <section class="portfolio-section">
-
-      <h2>Portfolio</h2>
-
-      <div class="portfolio-grid">
-
-        <!-- ILLUSTRATIONS -->
-
-        <div class="portfolio-item">
-
-          <div class="portfolio-wrapper">
-
-            <a href="Portfolio.html" id="illustrations" class="portfolio-card">
-
-              <img src="images/Portfolio/Illustrations/physical-paintings/SC2580294 J21091317370 Large.jpeg" alt="Illustrations">
-
-              <div class="overlay-text">Illustrations</div>
-
-            </a>
-
-            <button onclick="toggleSection('illustrations-content')">Illustrations</button>
-
-            <div id="illustrations-content" class="portfolio-content"></div>
-
-          </div>
-
-        </div>
-        <!-- COMICS -->
-
-        <div class="portfolio-item">
-
-          <div class="portfolio-wrapper">
-
-            <a href="comics.html" id="comics" class="portfolio-card">
-
-              <img src="images/Portfolio/comics/Manga Reinterpretation_ Demon Slayer.JPG" alt="Comics">
-
-              <div class="overlay-text">Comics</div>
-
-            </a>
-
-            <button onclick="toggleSection('comics-content')">Comics</button>
-
-            <div id="comics-content" class="portfolio-content">
-
-              <!-- expandable content here -->
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- Animation -->
-
-        <div class="portfolio-item">
-
-          <div class="portfolio-wrapper">
-
-            <a href="videos.html" id="videos" class="portfolio-card">
-
-              <img src="images/Portfolio/videos/video-cover Large.jpeg" alt="Videos">
-
-              <div class="overlay-text">Videos</div>
-
-            </a>
-
-            <button onclick="toggleSection('videos-content')">Animation</button>
-
-            <div id="videos-content" class="portfolio-content"></div>
-
-          </div>
-
-        </div>
-
-        <!-- COMMISSIONS -->
-
-        <div class="portfolio-item">
-
-          <div class="portfolio-wrapper">
-
-            <a href="commissions.html" id="commissions" class="portfolio-card">
-
-              <img src="images/Portfolio/past-commisions/Untitled_Artwork 2 copy.jpg" alt="Commissions">
-
-              <div class="overlay-text">Past Commissions</div>
-
-            </a>
-
-            <button onclick="toggleSection('commissions-content')">Past Commissions</button>
-
-            <div id="commissions-content" class="portfolio-content"></div>
-
-          </div>
-
-        </div>
-
-        <!-- CHARACTER DESIGN -->
-
-        <div class="portfolio-item">
-
-          <div class="portfolio-wrapper">
-
-            <a href="character.html" id="character" class="portfolio-card">
-
-              <img src="images/Portfolio/charcater-design/Character_Design_Angelo.jpg" alt="Character Design">
-
-              <div class="overlay-text">Character Design</div>
-
-            </a>
-
-            <button onclick="toggleSection('character-content')">Character Design</button>
-
-            <div id="character-content" class="portfolio-content"></div>
-
-          </div>
-
-        </div>
-
-        <!-- 6. PHOTOGRAPHY -->
-
-        <div class="portfolio-item">
-
-          <div class="portfolio-wrapper">
-
-            <a href="photography.html" id="photography" class="portfolio-card">
-
-              <img src="images/Portfolio/photography/Tentacles_1.jpg" alt="Photography">
-
-              <div class="overlay-text">Photography</div>
-
-            </a>
-
-            <button onclick="toggleSection('photography-content')">Photography</button>
-
-            <div id="photography-content" class="portfolio-content"></div>
-
-          </div>
-
-        </div>
-
+      <div class="section-heading">
+        <h2>My Recent Projects</h2>
       </div>
 
+      <div class="projects-grid">
+
+        <a href="images/Portfolio/comics/Tsan Di short comics.pdf" class="project-card" target="_blank">
+          <h3>Tsan Di</h3>
+          <p>Independent short comic</p>
+        </a>
+
+        <a href="DFMV.html" class="project-card">
+          <h3>Daddy’s Favorite</h3>
+          <p>2D/3D hybrid animated music video</p>
+        </a>
+
+        <a href="Animation-showreel.html" class="project-card">
+          <h3>Animation Showreel</h3>
+          <p>A collection of my animation work from 2023–2025</p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Selected Work -->
+    <section class="portfolio-section" id="selected-work">
+      <div class="section-heading">
+        <h2>Selected Work</h2>
+      </div>
+
+      <div class="portfolio-grid masonry-grid">
+
+        <!-- Illustrations -->
+        <a href="Portfolio.html" class="portfolio-card tall">
+          <img 
+            src="images/Portfolio/Illustrations/physical-paintings/SC2580294 J21091317370 Large.jpeg" 
+            alt="Illustrations"
+          >
+          <div class="overlay-text">
+            <span>Illustrations</span>
+          </div>
+        </a>
+
+        <!-- Comics -->
+        <a href="comics.html" class="portfolio-card">
+          <img 
+            src="images/Portfolio/comics/Manga Reinterpretation_ Demon Slayer.JPG" 
+            alt="Comics"
+          >
+          <div class="overlay-text">
+            <span>Comics</span>
+          </div>
+        </a>
+
+        <!-- Animation -->
+        <a href="videos.html" class="portfolio-card wide">
+          <img 
+            src="images/Portfolio/videos/video-cover Large.jpeg" 
+            alt="Animation and videos"
+          >
+          <div class="overlay-text">
+            <span>Animation</span>
+          </div>
+        </a>
+
+        <!-- Past Commissions -->
+        <a href="commissions.html" class="portfolio-card">
+          <img 
+            src="images/Portfolio/past-commisions/Untitled_Artwork 2 copy.jpg" 
+            alt="Past commissions"
+          >
+          <div class="overlay-text">
+            <span>Past Commissions</span>
+          </div>
+        </a>
+
+        <!-- Character Design -->
+        <a href="character.html" class="portfolio-card tall">
+          <img 
+            src="images/Portfolio/charcater-design/Character_Design_Angelo.jpg" 
+            alt="Character design"
+          >
+          <div class="overlay-text">
+            <span>Character Design</span>
+          </div>
+        </a>
+
+        <!-- Photography -->
+        <a href="photography.html" class="portfolio-card">
+          <img 
+            src="images/Portfolio/Overlay photo.png" 
+            alt="Photography"
+          >
+          <div class="overlay-text">
+            <span>Photography</span>
+          </div>
+        </a>
+
+      </div>
     </section>
 
   </main>
@@ -247,28 +207,28 @@
   <!-- Footer -->
   <footer>
     <div class="footer-container">
-      <p>Connect with me:</p>
+      <p class="footer-container">Connect with me:</p>
 
       <div class="social-links">
 
-        <a href="https://www.linkedin.com/in/yujie-yang-64a9a4349/" target="_blank">
+        <a href="https://www.linkedin.com/in/yujie-yang-64a9a4349/" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-linkedin"></i>
           <span>Yujie Yang</span>
         </a>
 
-        <a href="https://www.instagram.com/ujay_ujay_/?hl=en" target="_blank">
+        <a href="https://www.instagram.com/ujay_ujay_/?hl=en" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-instagram"></i>
           <span>@ujay_ujay_</span>
         </a>
 
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=paokiwi139@gmail.com">
+        <a href="mailto:paokiwi139@gmail.com">
           <i class="fas fa-envelope"></i>
           <span>paokiwi139@gmail.com</span>
         </a>
 
       </div>
 
-      <p>© 2025 Yujie Yang. All rights reserved.</p>
+      <p class="footer-container">© 2025 Yujie Yang. All rights reserved.</p>
     </div>
   </footer>
 
