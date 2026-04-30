@@ -913,3 +913,35 @@ header {
     background: rgba(0, 0, 0, 0.25);
   }
 }
+/* ===== MOBILE PROFILE IMAGE FIX ===== */
+
+.profile-wrapper {
+  flex-shrink: 0;
+  aspect-ratio: 1 / 1;
+}
+
+.profile-img {
+  aspect-ratio: 1 / 1;
+}
+
+/* Phone layout */
+@media (max-width: 700px) {
+  header,
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .profile-wrapper {
+    width: 180px;
+    height: 180px;
+    min-width: 180px;
+    min-height: 180px;
+    margin: 25px auto 0;
+  }
+}
