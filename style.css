@@ -1000,3 +1000,31 @@ header {
     margin: 25px auto 0;
   }
 }
+
+/* ===== LANDING HERO BLACK STRIP FIX ONLY ===== */
+
+/* Change this number to match your body padding */
+:root {
+  --page-padding: 20px;
+}
+
+.landing-hero {
+  margin-top: calc(-1 * var(--page-padding)) !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  width: 100vw !important;
+}
+
+.landing-bg {
+  width: 100vw;
+  height: 100vh;
+}
+
+.landing-bg img,
+.landing-bg video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
