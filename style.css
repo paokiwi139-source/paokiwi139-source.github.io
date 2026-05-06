@@ -639,6 +639,61 @@ header {
   filter: brightness(1.08);
 }
 
+/* ===== COMMISSIONS MASONRY ===== */
+
+.commissions-container {
+  column-count: 3;
+  column-gap: 24px;
+  max-width: 1400px;
+  margin: 30px auto;
+  padding: 0 24px;
+}
+
+/* BOTH IMAGES + VIDEOS */
+.commissions-container img,
+.commissions-container video {
+  width: 100%;
+  display: block;
+  margin-bottom: 24px;
+
+  border-radius: 14px;
+
+  break-inside: avoid;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+/* VIDEO SPECIFIC */
+.commissions-container video {
+  overflow: hidden;
+  background: transparent;
+}
+
+/* HOVER EFFECT */
+.commissions-container img:hover,
+.commissions-container video:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .commissions-container {
+    column-count: 2;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .commissions-container {
+    column-count: 1;
+  }
+}
+
 /* iPad */
 @media (max-width: 900px) {
   .commissions-container {
