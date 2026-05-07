@@ -70,3 +70,28 @@ sparkle.style.fontSize = `${16 * scale}px`;
         profile.classList.remove("active");
     }, 900);
 });
+
+/* ===== REMEMBER SCROLL POSITION ===== */
+
+const scrollKey = "lastScrollPosition";
+
+// Restore scroll position when returning to index.html
+window.addEventListener("load", () => {
+  if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
+    const savedPosition = sessionStorage.getItem(scrollKey);
+
+    if (savedPosition) {
+      window.scrollTo({
+        top: parseInt(savedPosition),
+        behavior: "smooth"
+      });
+    }
+  }
+});
+
+// Save scroll position before leaving page
+window.addEventListener("beforeunload", () => {
+  if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
+    sessionStorage.setItem(scrollKey, window.scrollY);
+  }
+});
