@@ -1028,3 +1028,77 @@ header {
   object-position: center center;
   display: block;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== BACK TO TOP BUTTON ===== */
+
+#back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: black;
+  color: white;
+
+  font-size: 26px;
+  line-height: 1;
+
+  cursor: pointer;
+  z-index: 99999;
+
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#back-to-top:hover {
+  transform: translateY(-4px);
+  opacity: 0.8;
+}
+
+/* ===== BACK TO TOP RESPONSIVE ===== */
+
+/* iPad / tablet */
+@media (max-width: 900px) {
+  #back-to-top {
+    right: 20px;
+    bottom: 20px;
+    width: 46px;
+    height: 46px;
+    font-size: 24px;
+  }
+}
+
+/* mobile phone */
+@media (max-width: 600px) {
+  #back-to-top {
+    right: 16px;
+    bottom: 16px;
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+  }
+  @media (max-width: 600px) {
+  #back-to-top {
+    opacity: 0.75;
+  }
+
+  #back-to-top:hover {
+    opacity: 1;
+  }
+}
+}
