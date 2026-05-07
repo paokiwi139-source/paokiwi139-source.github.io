@@ -4,7 +4,7 @@
 
 <header>
     <h1>
-  <a href="index.html" class="home-link">Yujie Yang</a>
+  <a href="index.html#main-content" class="home-link">Yujie Yang</a>
 </h1>
 
   </header>
@@ -55,6 +55,24 @@ Nobody wants to be remembered as nothing more than “someone’s mother” or �
 </div>
 
 	<script src="script-darkmode.js"></script> 
+
+	<button id="back-to-top" type="button" onclick="scrollToTop()" aria-label="Back to top">
+  ↑
+</button>
+
+<script>
+  function scrollToTop() {
+    document.documentElement.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+    document.body.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+</script>
 
 </body
 ></html>
