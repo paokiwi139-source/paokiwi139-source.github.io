@@ -1102,3 +1102,59 @@ html {
   }
 }
 }
+
+/*----------------------------------------
+Message form
+-----------------------------------------*/
+
+.message-form {
+  background:transparent;
+}
+
+form {
+  align-items: center;
+  display: grid;
+  gap: 15px;
+}
+
+.message-form h3{
+  margin-top: 150px;
+  justify-self: center;
+}
+
+input,
+textarea {
+  width: 50%;
+  padding: 14px;
+  border: 2px solid #769ddc;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fffdf0;
+  justify-self: center;
+
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+  justify-self: center;
+
+}
+
+button {
+  background: #1f2778;
+  color: #fafaf9;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  justify-self: center;
+}
+
+button:hover {
+  background: #355b9e;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+}
