@@ -1158,3 +1158,483 @@ button:hover {
   transition: transform 0.3s ease, opacity 0.3s ease;
 
 }
+
+/* ========================================
+   CENTERED PEEK GALLERY CAROUSEL
+======================================== */
+
+.gallery-section {
+  width: 100%;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.gallery-wrapper {
+  position: relative;
+  width: 65%;
+  max-width: 850px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-track {
+  position: relative;
+  width: 100%;
+  height: 420px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+/* all images */
+.gallery-image {
+  position: absolute;
+  height: 420px;
+  width: auto;
+  max-width: 70%;
+  object-fit: contain;
+
+  border-radius: 18px;
+
+  opacity: 0;
+  transform: scale(0.75);
+
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  pointer-events: none;
+}
+
+/* centre image */
+.gallery-image.active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  z-index: 3;
+}
+
+/* left peek image */
+.gallery-image.prev {
+  opacity: 0.35;
+  transform: translateX(-48%) scale(0.82);
+  z-index: 2;
+}
+
+/* right peek image */
+.gallery-image.next {
+  opacity: 0.35;
+  transform: translateX(48%) scale(0.82);
+  z-index: 2;
+}
+
+/* buttons closer to image */
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+
+  width: 55px;
+  height: 55px;
+
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.gallery-btn.prev {
+  left: -60px;
+}
+
+.gallery-btn.next {
+  right: -60px;
+}
+
+.gallery-btn:hover {
+  opacity: 0.75;
+}
+
+/* tablet */
+@media (max-width: 900px) {
+  .gallery-wrapper {
+    width: 82%;
+  }
+
+  .gallery-track {
+    height: 340px;
+  }
+
+  .gallery-image {
+    height: 340px;
+    max-width: 75%;
+  }
+
+  .gallery-btn.prev {
+    left: -45px;
+  }
+
+  .gallery-btn.next {
+    right: -45px;
+  }
+}
+
+/* phone */
+@media (max-width: 600px) {
+  .gallery-wrapper {
+    width: 92%;
+  }
+
+  .gallery-track {
+    height: 260px;
+  }
+
+  .gallery-image {
+    height: 260px;
+    max-width: 78%;
+  }
+
+  .gallery-image.prev {
+    transform: translateX(-55%) scale(0.75);
+  }
+
+  .gallery-image.next {
+    transform: translateX(55%) scale(0.75);
+  }
+
+  .gallery-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+
+  .gallery-btn.prev {
+    left: -10px;
+  }
+
+  .gallery-btn.next {
+    right: -10px;
+  }
+}
+
+/* =========================================
+   CASE STUDY PAGE
+========================================= */
+
+.case-study {
+  max-width: none;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px 140px;
+}
+
+/* HERO */
+
+.case-hero {
+  margin-bottom: 60px;
+}
+
+.case-label {
+  font-size: 1.2rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.case-hero h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  margin-bottom: 36px;
+}
+
+.case-intro {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  max-width: none;
+  opacity: 0.9;
+  margin-bottom: 50px;
+}
+
+/* META INFO */
+
+.case-meta {
+  display: grid;
+  gap: 16px;
+  border-left: 2px solid rgba(255,255,255,0.2);
+  padding-left: 28px;
+}
+
+.case-meta p {
+  margin: 0;
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+/* SECTIONS */
+
+.case-hero,
+.case-section {
+  width:60vw;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.case-section{
+  margin-bottom: 80px;
+}
+
+.case-section h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1;
+  margin-bottom: 30px;
+  letter-spacing: -0.04em;
+}
+
+.case-section p,
+.case-meta p,
+.case-list li {
+  font-size: 1.45rem;
+  line-height: 1.8;
+}
+
+/* BLOCKQUOTE */
+
+blockquote {
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  line-height: 1.4;
+  font-weight: 300;
+
+  border-left: 2px solid rgba(255,255,255,0.25);
+  padding-left: 28px;
+
+  margin: 50px 0;
+  opacity: 0.9;
+}
+
+/* TWO IMAGE GRID */
+
+.two-image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.two-image-grid img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+}
+
+.project-head-image img{
+  width: 100%;
+  display:block;
+  border-radius: 18px;
+  margin-top: 50px;
+}
+
+/* LISTS */
+
+.case-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 60px;
+
+  padding-left: 22px;
+  margin-top: 40px;
+}
+
+.case-list li {
+  line-height: 1.7;
+  opacity: 0.82;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .case-list {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+}
+
+/* FINAL WEBSITE CARD */
+
+.final-website-card {
+  display: block;
+  margin-top: 50px;
+  text-decoration: none;
+  color: white;
+}
+
+.final-website-card img {
+  width: 100%;
+  border-radius: 20px;
+
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
+
+.case-section span {
+  display: inline-block;
+  margin-top: 25px;
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  justify-self: center;
+
+}
+
+.final-website-card:hover img {
+  transform: scale(1.015);
+  filter: brightness(1.08);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .case-study {
+    padding: 30px 22px 120px;
+  }
+
+  .case-hero {
+    margin-bottom: 100px;
+  }
+
+  .case-section {
+    margin-bottom: 100px;
+  }
+
+  .two-image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-intro {
+    font-size: 1.2rem;
+  }
+
+  blockquote {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .case-hero h1 {
+    line-height: 1;
+  }
+
+  .case-section h2 {
+    margin-bottom: 28px;
+  }
+
+  .case-section p {
+    line-height: 1.8;
+  }
+
+  .gallery-track img {
+    height: 300px;
+  }
+}
+@media (max-width: 900px) {
+  .case-hero,
+  .case-section {
+    width: 86vw;
+  }
+
+  .case-intro {
+    font-size: 1.4rem;
+  }
+
+  .case-section p,
+  .case-meta p,
+  .case-list li {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .case-hero,
+  .case-section {
+    width: 90vw;
+  }
+}
+
+/* ===== CASE STUDY WIDTH FIX ===== */
+
+.case-hero,
+.case-section {
+  width: 60vw;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Override old global p max-width rules */
+.case-study p,
+.case-study li,
+.case-study blockquote {
+  max-width: none;
+}
+
+/* Force paragraph text to use the section width */
+.case-section p,
+.case-intro,
+.case-meta p {
+  width: 100%;
+}
+
+/* Remove shrink-to-content behaviour */
+.case-meta p {
+  width: auto;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .case-hero,
+  .case-section {
+    width: 86vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .case-hero,
+  .case-section {
+    width: 90vw;
+  }
+}
+
+/* ===== REDUCE BOTTOM GAP ON CASE STUDY PAGE ===== */
+
+.case-study {
+  padding-bottom: 40px;
+}
+
+.case-section:last-child {
+  margin-bottom: 40px;
+}
+
+footer {
+  margin-top: 30px;
+}
