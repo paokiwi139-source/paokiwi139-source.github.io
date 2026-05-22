@@ -13,12 +13,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (localStorage.getItem("theme") === "dark") {
       body.classList.add("dark-mode");
+
       if (icon) {
         icon.classList.remove("fa-sun");
         icon.classList.add("fa-moon");
       }
     } else {
       body.classList.remove("dark-mode");
+
       if (icon) {
         icon.classList.remove("fa-moon");
         icon.classList.add("fa-sun");
@@ -30,12 +32,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (body.classList.contains("dark-mode")) {
         localStorage.setItem("theme", "dark");
+
         if (icon) {
           icon.classList.remove("fa-sun");
           icon.classList.add("fa-moon");
         }
       } else {
         localStorage.setItem("theme", "light");
+
         if (icon) {
           icon.classList.remove("fa-moon");
           icon.classList.add("fa-sun");
@@ -44,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* ===== PROFILE FLIP + RANDOM SPARKLES ===== */
+  /* ===== PROFILE FLIP + SPARKLES ===== */
 
   const profile = document.getElementById("profile-wrapper");
   const sparkles = document.querySelectorAll(".sparkle");
@@ -74,44 +78,44 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* ===== CENTERED PEEK GALLERY CAROUSEL ===== */
+  /* ===== MULTIPLE CENTERED PEEK GALLERIES ===== */
 
-  const gallery = document.querySelector(".gallery-section");
+  const galleries = document.querySelectorAll(".gallery-section");
 
-  if (gallery) {
+  galleries.forEach(function (gallery) {
     const images = gallery.querySelectorAll(".gallery-image");
     const prevBtn = gallery.querySelector(".gallery-btn.prev");
     const nextBtn = gallery.querySelector(".gallery-btn.next");
 
-    if (images.length && prevBtn && nextBtn) {
-      let currentIndex = 0;
+    if (!images.length || !prevBtn || !nextBtn) return;
 
-      function updateGallery() {
-        images.forEach(function (image) {
-          image.classList.remove("active", "prev", "next");
-        });
+    let currentIndex = 0;
 
-        const prevIndex = (currentIndex - 1 + images.length) % images.length;
-        const nextIndex = (currentIndex + 1) % images.length;
-
-        images[currentIndex].classList.add("active");
-        images[prevIndex].classList.add("prev");
-        images[nextIndex].classList.add("next");
-      }
-
-      nextBtn.addEventListener("click", function () {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateGallery();
+    function updateGallery() {
+      images.forEach(function (image) {
+        image.classList.remove("active", "prev", "next");
       });
 
-      prevBtn.addEventListener("click", function () {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateGallery();
-      });
+      const prevIndex = (currentIndex - 1 + images.length) % images.length;
+      const nextIndex = (currentIndex + 1) % images.length;
 
-      updateGallery();
+      images[currentIndex].classList.add("active");
+      images[prevIndex].classList.add("prev");
+      images[nextIndex].classList.add("next");
     }
-  }
+
+    nextBtn.addEventListener("click", function () {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateGallery();
+    });
+
+    prevBtn.addEventListener("click", function () {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateGallery();
+    });
+
+    updateGallery();
+  });
 });
 
 /* ===== EXPAND / COLLAPSE SECTIONS ===== */
