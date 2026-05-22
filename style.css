@@ -121,13 +121,6 @@ img {
   border-radius: 10px;
 }
 
-.artwork-container img:hover,
-.comic-container img:hover {
-  transform: scale(1.05);
-  transition: 0.3s ease-in-out;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
 footer {
   background-color: black; /* Dark background */
   color: white; /* White text */
@@ -515,11 +508,25 @@ footer {
   align-items: center;
   gap: 50px;
   padding: 20px 0;
+  font-size: larger;
 }
+
+.comics-container h3 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  max-width: none;
+  opacity: 0.9;
+  text-align: left;
+}
+
+.comics-container h2 {
+  text-align: center;
+}
+
 
 /* EACH COMIC */
 .comic-item {
-  width: 70%;
+  width: 80%;
 }
 
 /* IMAGE */
@@ -528,12 +535,6 @@ footer {
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.3s ease;
-}
-
-/* HOVER */
-.comics-container img:hover {
-  transition: transform 0.3s ease;
-  transform: scale(1.02);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -1165,14 +1166,14 @@ button:hover {
 
 .gallery-section {
   width: 100%;
-  padding: 60px 0;
+  padding: 10px 0;
   overflow: hidden;
 }
 
 .gallery-wrapper {
   position: relative;
   width: 65%;
-  max-width: 850px;
+  max-width: 650px;
   margin: 0 auto;
 
   display: flex;
@@ -1183,7 +1184,7 @@ button:hover {
 .gallery-track {
   position: relative;
   width: 100%;
-  height: 420px;
+  height: 650px;
 
   display: flex;
   align-items: center;
@@ -1195,7 +1196,7 @@ button:hover {
 /* all images */
 .gallery-image {
   position: absolute;
-  height: 420px;
+  height: 800px;
   width: auto;
   max-width: 70%;
   object-fit: contain;
@@ -1327,6 +1328,20 @@ button:hover {
   }
 }
 
+.natural-gallery-image {
+  height: 420px;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+@media (max-width: 800px) {
+  .natural-gallery-image {
+    height: 300px;
+  }
+}
+
 /* =========================================
    CASE STUDY PAGE
 ========================================= */
@@ -1335,7 +1350,7 @@ button:hover {
   max-width: none;
   width: 100%;
   margin: 0 auto;
-  padding: 40px 20px 140px;
+  padding: 30px 50px 120px;
 }
 
 /* HERO */
@@ -1351,6 +1366,7 @@ button:hover {
   opacity: 0.7;
   margin-bottom: 24px;
   width: 100%;
+  justify-self: center;
 }
 
 .case-hero h1 {
@@ -1637,4 +1653,94 @@ blockquote {
 
 footer {
   margin-top: 30px;
+}
+
+/* ===== HORIZONTAL SCROLL GALLERY FOR MIXED ASPECT RATIOS ===== */
+
+.scroll-gallery {
+  display: flex;
+  gap: 24px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 20px 0 30px;
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-gallery img {
+  height: 420px;
+  width: auto;
+  max-width: none;
+
+  object-fit: contain;
+  display: block;
+
+  border-radius: 18px;
+  scroll-snap-align: center;
+
+  flex: 0 0 auto;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .scroll-gallery img {
+    height: 340px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .scroll-gallery img {
+    height: 260px;
+  }
+}
+
+/* ===== COMICS GALLERY: LARGE IMAGES WITHOUT EXTRA EMPTY SPACE ===== */
+
+.comics-container .gallery-wrapper {
+  width: 80vw;
+  max-width: none;
+}
+
+.comics-container .gallery-section h3 {
+  max-width: 60vw;
+  margin: 12px auto 30px;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.comics-container .gallery-section h2 {
+  margin-top: 50px;
+  margin-bottom: 12px;
+}
+
+.comics-container .gallery-track {
+  height: 800px;
+  overflow: visible;
+}
+
+.comics-container .gallery-image {
+  height: 800px;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+}
+
+/* Keep side images peeking without making the track feel huge */
+.comics-container .gallery-image.prev {
+  transform: translateX(-55%) scale(0.82);
+}
+
+.comics-container .gallery-image.next {
+  transform: translateX(55%) scale(0.82);
+}
+
+/* Move buttons closer */
+.comics-container .gallery-btn.prev {
+  left: 10%;
+}
+
+.comics-container .gallery-btn.next {
+  right: 10%;
 }
